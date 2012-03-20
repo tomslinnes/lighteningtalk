@@ -1,0 +1,42 @@
+    <form method="POST" action="/playwithstats1">
+<div data-role="header">
+    <h1 style="text-align:center;">PLAY ZONE</h1>
+</div>      
+
+<div data-role="content">
+    <div >
+    <ul data-role="listview" data-inset="true" style="text-align:center;">
+    <li data-divider-theme="b" style="text-align:center;" > GAME SUMMARY</li>
+    <li style="text-align:center;">You selected  <%=@player_throw %>.</li>
+    <li style="text-align:center;">Computer Selected  <%= @computer_throw %>.</li>
+    <li style="text-align:center;">You <%= @result %> the game.</li>
+    </ul>
+    </div>
+	 
+    <div>
+    <ul data-role="listview" data-theme="d" data-divider-theme="b" data-inset="true"  >
+    <li data-role="list-divider">Won <span class="ui-li-count"><%=@wins %></span></li>
+    <li data-role="list-divider">Lost<span class="ui-li-count"><%=@losses %></span></li>
+    <li data-role="list-divider">Tied<span class="ui-li-count"><%=@tie %></span></li>
+    </ul>    
+    </div>
+    <br/> 
+    
+    <input type="submit" value="Play Again" name="selected_value" data-role="button" data-theme="e" />
+    
+
+    <div style="text-align:center;">
+    <div style="visibility:hidden;">Wins= <%= @wins %></div>
+    <div style="visibility:hidden;"><input type="<%= @wins %>" value="<%= @wins %>" name="wins" /></div>
+
+    <div style="visibility:hidden;">Losses= <%= @losses %></div>
+    <div style="visibility:hidden;"><input type="<%= @losses %>" value="<%= @losses %>" name="losses" /></div>
+
+    <div style="visibility:hidden;">Ties= <%= @tie %></div>
+    <div style="visibility:hidden;"><input type="<%= @tie %>" value="<%= @tie %>" name="ties" /></div>
+    </div>
+   
+
+
+</div>
+</form>

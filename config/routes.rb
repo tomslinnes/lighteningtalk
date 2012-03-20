@@ -1,4 +1,19 @@
 Lighteningtalk::Application.routes.draw do
+
+  match '/home', :to => 'pages#home'
+  match '/play',   :to => 'pages#play'
+  match '/playwithstats',    :to => 'pages#playwithstats'
+  match '/playwithstats1',   :to => 'pages#playwithstats1'
+  
+
+  get "pages/home"
+
+  get "pages/play"
+
+  get "pages/playwithstats"
+
+  get "pages/playwithstats1"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

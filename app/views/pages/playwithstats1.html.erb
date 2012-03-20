@@ -1,0 +1,41 @@
+      <form method="POST" action="/playwithstats">
+
+	
+<div data-role="header">
+    <h1 style="text-align:center;">PLAY ZONE</h1>    
+</div>
+
+    
+
+<div data-role="content">
+     
+     <p style="text-align:center;">
+     Click on the Button to Select your choice.
+     </p>
+    <div data-role="controlgroup" data-theme="e" >
+    <input type="submit" value="ROCK" name ="selected_value" data-theme="e"/>
+    <input type="submit" value="PAPER" name="selected_value" data-theme="e"/>
+    <input type="submit" value="SCISSORS" name="selected_value" data-theme="e" />
+    </div>
+
+    <div>
+    <ul data-role="listview" data-theme="d" data-divider-theme="b"  data-inset="true"  >
+    <li data-role="list-divider" >Won <span class="ui-li-count"><%=@wins %></span></li>
+    <li data-role="list-divider" >Lost<span class="ui-li-count"><%=@losses %></span></li>
+    <li data-role="list-divider" >Tied<span class="ui-li-count"><%=@tie %></span></li>
+    </ul>    
+    </div>
+
+    <div style="text-align:center;">
+    <div style="visibility:hidden;">Wins= <%= @wins %></div>
+    <div style="visibility:hidden;"><input type="<%= @wins %>" value="<%= @wins %>" name="wins" /></div>
+
+    <div style="visibility:hidden;">Losses= <%= @losses %></div>
+    <div style="visibility:hidden;"><input type="<%= @losses %>" value="<%= @losses %>" name="losses" /></div>
+
+    <div style="visibility:hidden;">Ties= <%= @tie %></div>
+    <div style="visibility:hidden;"><input type="<%= @tie %>" value="<%= @tie %>" name="ties" /></div>
+    </div>
+
+</div>
+</form>
