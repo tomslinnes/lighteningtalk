@@ -1,6 +1,9 @@
 Lighteningtalk::Application.routes.draw do
 
+  get "pages/home1"
+  match '/start', :to => 'pages#start'
   match '/home', :to => 'pages#home'
+  match '/home1', :to => 'pages#home1'
   match '/play',   :to => 'pages#play'
   match '/playwithstats',    :to => 'pages#playwithstats'
   match '/playwithstats1',   :to => 'pages#playwithstats1'
